@@ -312,7 +312,7 @@ function file_audio(path){
 	<br>
 	<!-- 固定标签 -->
 	<div class="mdui-textfield">
-	  <label class="mdui-textfield-label">下载地址</label><button class="mdui-btn mdui-ripple" onclick="copyToClip("${url}")"> 复制 </button>
+	  <label class="mdui-textfield-label">下载地址<button class="mdui-btn mdui-ripple" onclick="copyToClip(${url})"> 复制 </button></label>
 	  <input class="mdui-textfield-input" type="text" value="${url}"/>
 	</div>
 	<div class="mdui-textfield">
