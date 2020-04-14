@@ -139,7 +139,7 @@ function list_files(path,files){
                     markdown("#readme_md",data);
                 });
             }
-            if(item.name.toLowerCase() == "HEAD.md"){
+            if(item.name.toLowerCase() == "head.md"){
 	            get_file(p, item, function(data){
                     markdown("#head_md",data);
                 });
