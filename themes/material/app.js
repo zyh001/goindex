@@ -187,7 +187,8 @@ function copyToClip(content, message) {
     document.execCommand("copy"); 
     document.body.removeChild(aux);
     if (message == null) {
-        alert("复制成功");
+	mdui.alert('复制成功');
+        //alert("复制成功");
     } else{
         alert(message);
     }
