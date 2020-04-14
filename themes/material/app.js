@@ -134,12 +134,13 @@ function list_files(path,files){
         }else{
             var p = path+item.name;
             var c = "file";
-            if(item.name.toLowerCase() == "readme.md"){
+	    var rhfile = item.name;
+            if(rhfile.toLowerCase() === "readme.md"){
                  get_file(p, item, function(data){
                     markdown("#readme_md",data);
                 });
             }
-            if(item.name.toLowerCase() == "head.md"){
+            if(rhfile.toLowerCase() === "head.md"){
 	            get_file(p, item, function(data){
                     markdown("#head_md",data);
                 });
