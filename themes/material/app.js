@@ -179,6 +179,14 @@ function get_file(path, file, callback){
 }
 
 //复制粘贴指令
+function copyText() { 
+	var text = document.getElementById("text").innerText; 
+	var input = document.getElementById("input"); 
+	input.value = text; // 修改文本框的内容 
+	input.select(); // 选中文本 
+	document.execCommand("copy"); // 执行浏览器复制命令 
+	mdui.alert('复制成功');
+}
 function copyToClip(content, message) {
     var aux = document.createElement("input"); 
     aux.setAttribute("value", content); 
@@ -314,7 +322,8 @@ function file_audio(path){
 	<!-- 固定标签 -->
 	<div class="mdui-textfield">
 	  <label class="mdui-textfield-label">下载地址</label>
-	  <input class="mdui-textfield-input" onclick="copyToClip(${url})" type="text" value="${url}"/>
+	  <input id="input" class="mdui-textfield-input" type="text" value="${url}"/>
+	  <button class="mdui-btn mdui-btn-raised mdui-ripple" onclick="copyText()"> 复制 </button>
 	</div>
 	<div class="mdui-textfield">
 	  <label class="mdui-textfield-label">HTML 引用地址</label>
